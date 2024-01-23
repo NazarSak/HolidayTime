@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   background: #202846;
   div {
     width: 1920px;

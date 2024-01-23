@@ -5,6 +5,8 @@ import Layout from "./Components/Layout/Layout";
 import General from "./Components/General/General";
 import Contacts from "./Components/contacts/Contacts";
 import AboutUs from "./Components/aboutUs/aboutUs";
+import Reserve from "./Components/reserve/Reserve";
+import Account from "./Components/account/Account";
 
 function App() {
   return (
@@ -13,6 +15,10 @@ function App() {
         <Route path="general" element={<General />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="aboutUs" element={<AboutUs />} />
+        <Route path="reserve" element={<Reserve />} />
+        <Route path="reserve" element={<Reserve />} />
+        <Route path="personal" element={<Account />} />
+
       </Route>
     </Routes>
   );

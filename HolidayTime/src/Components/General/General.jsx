@@ -1,4 +1,12 @@
 import ThirdGeneral from "../../assets/ThirdGeneral.png";
+import Form from "../form/Form";
+import Slider from "../slider/Slider";
+// import HouseOne from "../../assets/HouseOne.png";
+// import HouseTwo from "../../assets/HouseTwo.png";
+// import HouseThree from "../../assets/HouseThree.png";
+// import HouseFour from "../../assets/HouseFour.png";
+import ArrayHouses from "../../Helpers/ArrayHouses";
+
 import {
   FirstConatinerImg,
   SecondConatinerImg,
@@ -15,7 +23,11 @@ const General = () => {
           <p>Автентичний відпочинок серед українського колориту!</p>
         </div>
       </FirstConatinerImg>
-      <SecondConatinerImg></SecondConatinerImg>
+
+      <SecondConatinerImg>
+        <Slider ArrayHouses={ArrayHouses}/>
+      </SecondConatinerImg>
+
       <ThirdConatinerImg>
         <img src={ThirdGeneral} alt="" />
         <InfoThirdCon>
@@ -25,6 +37,7 @@ const General = () => {
           </p>
         </InfoThirdCon>
       </ThirdConatinerImg>
+      <Form />
     </main>
   );
 };

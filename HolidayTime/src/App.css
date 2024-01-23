@@ -1,3 +1,7 @@
+html {
+  /* overflow-x: hidden; */
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -15,6 +19,7 @@ ul {
 }
 
 h2,
+h3,
 p {
   margin: 0;
 }

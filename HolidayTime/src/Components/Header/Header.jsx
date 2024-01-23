@@ -1,12 +1,26 @@
-import { Section,Container, LogoImg, List, StyledLink, Line } from "./Header.styled";
+import {
+  Section,
+  Container,
+  LogoImg,
+  List,
+  StyledLink,
+  Line,
+} from "./Header.styled";
 import Globus from "../../assets/SVG/globus.svg";
 import Logo from "../../assets/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleHome = () => {
+    navigate("/general");
+  };
+
   return (
     <Section>
       <Container>
-        <LogoImg src={Logo} alt="Logo" />
+        <LogoImg onClick={handleHome} src={Logo} alt="Logo" />
         <List>
           <li>
             <StyledLink to="/general">ГОЛОВНА</StyledLink>
@@ -17,15 +31,15 @@ const Header = () => {
           </li>
           <Line />
           <li>
-            <StyledLink to='/reservation'>ЗАБРОНЮВАТИ</StyledLink>
+            <StyledLink to="/reserve">ЗАБРОНЮВАТИ</StyledLink>
           </li>
           <Line />
           <li>
-            <StyledLink to='/contacts'>КОНТАКТИ</StyledLink>
+            <StyledLink to="/contacts">КОНТАКТИ</StyledLink>
           </li>
           <Line />
           <li>
-            <StyledLink to='/personal'>ОСОБИСТИЙ КАБІНЕТ</StyledLink>
+            <StyledLink to="/personal">ОСОБИСТИЙ КАБІНЕТ</StyledLink>
           </li>
           <Line />
           <li>

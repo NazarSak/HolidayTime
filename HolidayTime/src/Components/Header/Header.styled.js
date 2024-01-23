@@ -18,6 +18,7 @@ export const Container = styled.div`
 export const LogoImg = styled.img`
   width: 180px;
   height: 70px;
+  cursor: pointer;
 `;
 
 export const List = styled.ul`
