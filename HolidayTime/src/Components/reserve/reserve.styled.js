@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ContainerTitle = styled.div`
   height: 140px;
@@ -23,20 +24,7 @@ export const List = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 36px;
-  li {
-    width: 1299px;
-    height: 300px;
-    background: #bdbdc6;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 100px;
-    padding: 0 87px 0 103px;
-  }
-  img {
-    width: 485px;
-    height: 244px;
-  }
+  position: relative;
   p {
     color: #202846;
     text-align: center;
@@ -51,6 +39,22 @@ export const List = styled.ul`
     font-size: 36px;
     font-style: italic;
     font-weight: 700;
+  }
+`;
+
+export const Li = styled.li`
+  width: 1299px;
+  height: 300px;
+  background: #bdbdc6;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 100px;
+  padding: 0 87px 0 103px;
+  position: relative;
+  img {
+    width: 485px;
+    height: 244px;
   }
 `;
 
@@ -136,9 +140,29 @@ export const ListHouses = styled.select`
   position: absolute;
   top: 50px;
   right: 5px;
+  z-index: 1;
 `;
 
 export const ArrowImg = styled.img`
   transform: rotate(${(props) => (props.isopen ? "180deg" : "0deg")});
   transition: transform 0.3s ease;
+`;
+
+export const StyledLink = styled(Link)`
+  background-color: #202846;
+  width: 200px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: -48px;
 `;

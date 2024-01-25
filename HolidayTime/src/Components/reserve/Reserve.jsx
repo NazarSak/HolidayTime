@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ArrayHouses from "../../Helpers/ArrayHouses";
 import Arrow from "../../assets/SVG/arrow.svg";
+import ArrowTopFunc from "../../Helpers/ArrowTopFunc";
 import {
   ContainerTitle,
   List,
@@ -11,6 +12,8 @@ import {
   DropdownContainer,
   ListHouses,
   ArrowImg,
+  StyledLink,
+  Li,
 } from "./reserve.styled";
 
 const Reserve = () => {
@@ -60,15 +63,19 @@ const Reserve = () => {
             <option value="Карпати" onClick={handleOpen}>
               Карпати
             </option>
-            {/* Add more options as needed */}
           </ListHouses>
-          <ArrowImg isopen={isOpenList ? 1 : 0} onClick={handleOpen} src={Arrow} alt="arrow" />
+          <ArrowImg
+            isopen={isOpenList ? 1 : 0}
+            onClick={handleOpen}
+            src={Arrow}
+            alt="arrow"
+          />
         </label>
       </DropdownContainer>
       <div>
         <List>
-          {filteredHouse().map(({ name, smallImg, details }, index) => (
-            <li key={index}>
+          {filteredHouse().map(({ name, smallImg, details, id }, index) => (
+            <Li key={index}>
               <DetailsTitleCon>
                 <LineTitleCon>
                   <h2>{name}</h2>
@@ -77,11 +84,12 @@ const Reserve = () => {
                 <ConDescription>
                   <p>{details}</p>
                 </ConDescription>
+                <StyledLink to={`/reserve/${id}`}>Детальніше</StyledLink>
               </DetailsTitleCon>
-
               <img src={smallImg} alt="imhHouse" />
-            </li>
+            </Li>
           ))}
+          <ArrowTopFunc right="55px" bottom="252px" />
         </List>
       </div>
     </>

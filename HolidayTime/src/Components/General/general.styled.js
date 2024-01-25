@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import HolidayBack from "../../assets/HolidayBack.png";
 
-
-
 export const FirstConatinerImg = styled.div`
   height: 369px;
   width: 1488px;
@@ -39,14 +37,14 @@ export const FirstConatinerImg = styled.div`
 export const SecondConatinerImg = styled.div``;
 
 export const ThirdConatinerImg = styled.div`
-    width: 1488px;
-    height: 412px;
-    background: rgba(193, 193, 195, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    margin: 50px 0;
+  width: 1488px;
+  height: 412px;
+  background: rgba(193, 193, 195, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 50px 0;
   img {
     width: 698px;
     height: 349px;

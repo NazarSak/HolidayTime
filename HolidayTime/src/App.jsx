@@ -7,6 +7,7 @@ import Contacts from "./Components/contacts/Contacts";
 import AboutUs from "./Components/aboutUs/aboutUs";
 import Reserve from "./Components/reserve/Reserve";
 import Account from "./Components/account/Account";
+import ReserveInfo from "./Components/reserveInfo/reserveInfo";
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
         <Route path="contacts" element={<Contacts />} />
         <Route path="aboutUs" element={<AboutUs />} />
         <Route path="reserve" element={<Reserve />} />
-        <Route path="reserve" element={<Reserve />} />
+        <Route path="reserve" element={<Reserve />}/>
+          <Route path="reserve/:reserveid" element={<ReserveInfo />} />
         <Route path="personal" element={<Account />} />
-
       </Route>
     </Routes>
   );

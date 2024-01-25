@@ -1,19 +1,14 @@
 import ThirdGeneral from "../../assets/ThirdGeneral.png";
 import Form from "../form/Form";
 import Slider from "../slider/Slider";
-// import HouseOne from "../../assets/HouseOne.png";
-// import HouseTwo from "../../assets/HouseTwo.png";
-// import HouseThree from "../../assets/HouseThree.png";
-// import HouseFour from "../../assets/HouseFour.png";
 import ArrayHouses from "../../Helpers/ArrayHouses";
-
+import ArrowTopFunc from "../../Helpers/ArrowTopFunc";
 import {
   FirstConatinerImg,
   SecondConatinerImg,
   ThirdConatinerImg,
   InfoThirdCon,
 } from "./general.styled";
-
 const General = () => {
   return (
     <main>
@@ -25,7 +20,7 @@ const General = () => {
       </FirstConatinerImg>
 
       <SecondConatinerImg>
-        <Slider ArrayHouses={ArrayHouses}/>
+        <Slider ArrayHouses={ArrayHouses} />
       </SecondConatinerImg>
 
       <ThirdConatinerImg>
@@ -38,6 +33,7 @@ const General = () => {
         </InfoThirdCon>
       </ThirdConatinerImg>
       <Form />
+      <ArrowTopFunc right="55px" bottom="-752px" />
     </main>
   );
 };

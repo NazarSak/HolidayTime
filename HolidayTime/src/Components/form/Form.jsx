@@ -17,7 +17,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Form submitted with data:", formData);
+    alert("Chill this is test form)");
     setFormData({
       firstName: "",
       lastName: "",
