@@ -39,10 +39,6 @@ const Header = () => {
           </li>
           <Line />
           <li>
-            <StyledLink to="/personal">ОСОБИСТИЙ КАБІНЕТ</StyledLink>
-          </li>
-          <Line />
-          <li>
             <img src={Globus} alt="Globus" />
             <h2>UA</h2>
           </li>

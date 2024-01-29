@@ -6,6 +6,9 @@ import {
   Section,
   SectionInfo,
   StyledLink,
+  ContainerP,
+  InfoContainer,
+  AlertContainer,
 } from "./reserveInfo.styled";
 
 const ReserveInfo = () => {
@@ -14,7 +17,7 @@ const ReserveInfo = () => {
     (house) => house.id.toString() === reserveid
   );
 
-  const { id, smallImg, details, reservation, location, name } = selectedHouse;
+  const { smallImg, details, reservation } = selectedHouse;
 
   return (
     <>
@@ -22,11 +25,22 @@ const ReserveInfo = () => {
         <h2>Забронювати будиночок в {reservation}</h2>
       </ContainerTitle>
       <Section>
-        <StyledLink to={'/reserve'}>
+        <StyledLink to={"/reserve"}>
           <img src={ArrowBack} alt="" />
           Назад
         </StyledLink>
-        <SectionInfo></SectionInfo>
+        <SectionInfo>
+          <InfoContainer>
+            <img src={smallImg} alt="smallImg" />
+            <ContainerP>
+              <p>{details}</p>
+            </ContainerP>
+          </InfoContainer>
+          <AlertContainer>
+            <p>більше інформації про цю місцевість немає</p>
+            <p>There is no more information about this area</p>
+          </AlertContainer>
+        </SectionInfo>
       </Section>
     </>
   );
